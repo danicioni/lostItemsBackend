@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "6079c5aa-f848-439e-84a4-ebe37f00a43c",
+		"name": "LostItems",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43160312"
+	},
+	"item": [
+		{
+			"name": "lostitems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/lostitems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"lostitems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lostitems/false",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/lostitems/false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"lostitems",
+						"false"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lostitems",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ciaociao\",\r\n    \"description\": \"Telefono della Apple costoso\",\r\n    \"lost_date\": \"2025-05-07\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/lostitems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"lostitems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lostitem/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"Ciaociao2\",\r\n        \"description\": \"Telefono della Apple costoso2\",\r\n        \"lost_date\": \"2025-05-07\",\r\n        \"found\": true,\r\n        \"found_date\": \"2025-05-08\",\r\n        \"found_location\": \"ITS Prodigi del cazzo\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/lostitems/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"lostitems",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lostitem/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/lostitems/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"lostitems",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
